@@ -31,7 +31,7 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            I’m a passionate full-stack web developer focused on building modern, responsive, and secure applications.
+            I&apos;m a passionate full-stack web developer focused on building modern, responsive, and secure applications.
             From robust backend APIs in <strong>Node.js</strong> and <strong>Django</strong> to scalable frontend interfaces in <strong>React</strong> and <strong>Next.js</strong>,
             I bring ideas to life with clean code and elegant UI powered by <strong>Tailwind CSS</strong>, <strong>MongoDB</strong>, and <strong>PostgreSQL</strong>.
           </p>
