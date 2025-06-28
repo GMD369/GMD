@@ -11,7 +11,7 @@ export async function POST(req) {
   try {
     await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>", // allowed without domain setup
-      to: "yourgmail@gmail.com", // ← your Gmail
+      to: "ghulammohiyudin11@gmail.com", // ← your Gmail
       subject: `New message from ${name}`,
       html: `
         <h3>New Contact Message</h3>

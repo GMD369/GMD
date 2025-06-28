@@ -8,7 +8,7 @@ export const metadata = {
   title: 'My Portfolio',
   description: 'Personal Portfolio based on uiverse.io design',
    icons: {
-    icon: "/2.png",
+    icon: "/logo.png",
   },
 };
 
