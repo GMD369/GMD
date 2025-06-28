@@ -49,7 +49,7 @@ export default function About() {
 
           {/* Description */}
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            I’m{" "}
+            I&apos;m{" "}
             <span className="font-semibold text-white">Ghulam Mohiyu Ud Din</span>, a{" "}
             <span className="font-semibold text-cyan-300">Full-Stack Web Developer</span>{" "}
             from Pakistan with over 2 years of experience building responsive, secure, and scalable web applications.
