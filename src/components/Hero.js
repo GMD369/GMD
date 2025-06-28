@@ -24,7 +24,7 @@ export default function Hero() {
           </span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-white">
-            Hi, I’m&nbsp;
+            Hi, I&apos;m&nbsp;
             <span className="inline-block bg-[linear-gradient(90deg,#06b6d4,#3b82f6,#8b5cf6)] bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">
               Ghulam Mohiyu Ud Din
             </span>

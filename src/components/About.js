@@ -2,6 +2,7 @@
 
 import { Briefcase, Code2, BrainCircuit } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function About() {
   return (
@@ -16,10 +17,12 @@ export default function About() {
       <div className="mx-auto flex max-w-7xl flex-col items-center gap-12 md:flex-row">
         {/* ─── Avatar ─── */}
         <div className="relative w-64 h-64 md:w-72 md:h-72 rounded-3xl overflow-hidden border-2 border-cyan-400/20 shadow-2xl bg-gradient-to-br from-[#1f2937] to-[#0f172a]">
-          <img
+          <Image
             src="/IMG_4009.jpg"
             alt="Profile"
+            fill
             className="h-full w-full object-cover rounded-3xl"
+            priority
           />
         </div>
 
