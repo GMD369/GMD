@@ -8,7 +8,7 @@ export const metadata = {
   title: 'My Portfolio',
   description: 'Personal Portfolio based on uiverse.io design',
    icons: {
-    icon: "/2.png", // ya .png if you prefer
+    icon: "/2.png",
   },
 };
 
@@ -18,7 +18,6 @@ export default function RootLayout({ children }) {
       <body suppressHydrationWarning className="bg-gradient-to-br from-[#090b11] to-[#454951] text-white font-grotesk">
         <BackgroundGrid/>
         <Navbar />
-        
         {/* push content below navbar height (~72 px) */}
         <div className="pt-20">{children}</div>
         <Footer/>
