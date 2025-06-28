@@ -7,6 +7,9 @@ import Footer from '@/components/Footer';
 export const metadata = {
   title: 'My Portfolio',
   description: 'Personal Portfolio based on uiverse.io design',
+   icons: {
+    icon: "/2.png", // ya .png if you prefer
+  },
 };
 
 export default function RootLayout({ children }) {
