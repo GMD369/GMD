@@ -40,7 +40,7 @@ const projects = [
     title: "Todo App",
     description: "A full-stack productivity app with persistent task storage.",
     tech: ["React", "Node.js", "Express.js", "MongoDB"],
-    live: "",
+    live: "https://todoappbrowser.netlify.app/",
     code: "https://github.com/GMD369/Todo-App",
     image: "/todo.png",
   },
