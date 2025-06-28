@@ -57,7 +57,7 @@ export default function About() {
             <strong>React</strong>, <strong>Node.js</strong>, <strong>Django</strong>,{" "}
             and databases like <strong>PostgreSQL</strong> & <strong>MongoDB</strong>.
             I enjoy developing sleek UI/UX with <strong>Next.js</strong> & <strong>Tailwind CSS</strong>,
-            and I'm always exploring new tools in modern web ecosystems.
+            and I&apos;m always exploring new tools in modern web ecosystems.
           </p>
 
           {/* Stats */}
