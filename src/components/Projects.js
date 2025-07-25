@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: "Resume Tailor — AI Resume Customizer",
-    description: "AI-powered web app to instantly tailor your resume for any job description. Paste your resume and job ad, and get a customized version in seconds. Secure, fast, and privacy-first.",
+    description: "AI-powered web app to instantly tailor your resume for any job description.",
     tech: ["Next.js", "TailwindCSS", "Supabase", "MongoDB Atlas", "n8n", "ShadCN"],
     live: "https://nexium-mohiyuddin-resume-tailor.vercel.app/", // Replace with your actual deployed link
     code: "https://github.com/GMD369/Nexium_Mohiyuddin_ResumeTailor/tree/main/grand-project", // Replace with your actual repo link
