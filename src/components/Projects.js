@@ -16,9 +16,17 @@ const projects = [
     title: "Resume Tailor — AI Resume Customizer",
     description: "AI-powered web app to instantly tailor your resume for any job description.",
     tech: ["Next.js", "TailwindCSS", "Supabase", "MongoDB Atlas", "n8n", "ShadCN"],
-    live: "https://nexium-mohiyuddin-resume-tailor.vercel.app/", // Replace with your actual deployed link
-    code: "https://github.com/GMD369/Nexium_Mohiyuddin_ResumeTailor/tree/main/grand-project", // Replace with your actual repo link
-    image: "/tailor.png" // Or any relevant image from your public/ directory
+    live: "https://nexium-mohiyuddin-resume-tailor.vercel.app/", 
+    code: "https://github.com/GMD369/Nexium_Mohiyuddin_ResumeTailor/tree/main/grand-project", 
+    image: "/tailor.png" 
+  },
+  {
+    title: "Restaurant Website — Food Delivery Platform",
+    description: "Modern responsive restaurant website with menu display, and food delivery features",
+    tech: ["HTML5", "CSS3", "JavaScript", "Font Awesome"],
+    live: "https://restaurantdelicious3.netlify.app/", 
+    code: "https://github.com/GMD369/JS-Projects/tree/main/GrandProject", 
+    image: "/rest.png" 
   },
   {
     title: "Twitter UI Clone (X.com)",
