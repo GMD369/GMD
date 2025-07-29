@@ -19,8 +19,8 @@ export default function Navbar() {
     <nav className="fixed inset-x-0 top-0 z-50 bg-black/60 backdrop-blur-md shadow-md font-grotesk">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         {/* Logo */}
-        <div className="relative select-none text-2xl font-bold text-white">
-          <span>G</span><span className="font-extrabold">.</span> Portfolio
+        <div className="relative select-none text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent drop-shadow-lg flex items-center gap-1">
+          <span>G</span><span className="font-black relative top-2 right-1 text-cyan-300 text-sm mx-0.5">●</span> Portfolio
           <div className="absolute left-0 -bottom-1 h-[3px] w-full rounded-full bg-cyan-400" />
         </div>
 

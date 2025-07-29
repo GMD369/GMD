@@ -8,7 +8,7 @@ export const metadata = {
   title: 'Portfolio | Ghulam Mohiyu Ud Din',
   description: 'Personal Portfolio based on uiverse.io design',
    icons: {
-    icon: "/logo.png",
+    icon: "/image.png",
   },
 };
 
