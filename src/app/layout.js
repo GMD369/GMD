@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body suppressHydrationWarning className="bg-gradient-to-br from-[#090b11] to-[#454951] text-white font-grotesk">
+      <body suppressHydrationWarning className="bg-gradient-to-br from-[#090b11] to-[#454951] text-white font-poppins">
         <BackgroundGrid/>
         <Navbar />
         {/* push content below navbar height (~72 px) */}

@@ -24,10 +24,14 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 } */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif !important;
+}
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
 }
 
 @keyframes slowPulse {
@@ -96,4 +100,68 @@ body {
 @keyframes gridBlink {
   0%, 100% { opacity: 0; }
   50%      { opacity: 1; }
+}
+
+/* Skills scrolling animations */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scroll-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Smooth scrolling with better performance */
+.animate-scroll-left {
+  animation: scroll-left 25s linear infinite;
+  will-change: transform;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 25s linear infinite;
+  will-change: transform;
+}
+
+/* Add gradient masks to create smooth fade effect */
+.skills-container {
+  position: relative;
+}
+
+.skills-container::before,
+.skills-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.skills-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(9, 11, 17, 1), transparent);
+}
+
+.skills-container::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(9, 11, 17, 1), transparent);
+}
+
+.animate-scroll-left {
+  animation: scroll-left 60s linear infinite;
+}
+
+.animate-scroll-right {
+  animation: scroll-right 60s linear infinite;
 }

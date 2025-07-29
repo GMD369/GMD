@@ -73,19 +73,61 @@ export default function Skills() {
         </h2>
       </div>
 
-      {/* Skills Grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        {skills.map((skill, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-cyan-500/20"
-          >
-            {skill.icon}
-            <span className="mt-3 text-gray-300 font-medium text-sm sm:text-base">
-              {skill.name}
-            </span>
-          </div>
-        ))}
+      {/* Skills Container */}
+      <div className="max-w-7xl mx-auto skills-container overflow-hidden">
+        {/* First Row */}
+        <div className="flex animate-scroll-left mb-8 relative" style={{ width: 'max-content' }}>
+          {skills.map((skill, index) => (
+            <div
+              key={`row1-${index}`}
+              className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-cyan-500/10 min-w-[200px] mx-3"
+            >
+              {skill.icon}
+              <span className="mt-3 text-gray-300 font-medium text-sm sm:text-base">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {skills.map((skill, index) => (
+            <div
+              key={`row1-duplicate-${index}`}
+              className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-cyan-500/10 min-w-[200px] mx-3"
+            >
+              {skill.icon}
+              <span className="mt-3 text-gray-300 font-medium text-sm sm:text-base">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Second Row */}
+        <div className="flex animate-scroll-right" style={{ width: 'max-content' }}>
+          {skills.slice().reverse().map((skill, index) => (
+            <div
+              key={`row2-${index}`}
+              className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-cyan-500/10 min-w-[200px] mx-3"
+            >
+              {skill.icon}
+              <span className="mt-3 text-gray-300 font-medium text-sm sm:text-base">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+          {/* Duplicate for seamless loop */}
+          {skills.slice().reverse().map((skill, index) => (
+            <div
+              key={`row2-duplicate-${index}`}
+              className="flex flex-col items-center text-center bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-6 shadow-md transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:shadow-cyan-500/10 min-w-[200px] mx-3"
+            >
+              {skill.icon}
+              <span className="mt-3 text-gray-300 font-medium text-sm sm:text-base">
+                {skill.name}
+              </span>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
