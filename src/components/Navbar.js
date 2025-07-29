@@ -20,7 +20,7 @@ export default function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
         {/* Logo */}
         <div className="relative select-none text-2xl font-bold text-white">
-          MY&nbsp;PORTFOLIO
+          GMD&apos;s Portfolio
           <div className="absolute left-0 -bottom-1 h-[3px] w-full rounded-full bg-cyan-400" />
         </div>
 
