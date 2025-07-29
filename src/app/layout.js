@@ -5,7 +5,7 @@ import BackgroundGrid from "@/components/BackgroundGrid";
 import Footer from '@/components/Footer';
 
 export const metadata = {
-  title: 'My Portfolio',
+  title: 'Portfolio | Ghulam Mohiyu Ud Din',
   description: 'Personal Portfolio based on uiverse.io design',
    icons: {
     icon: "/logo.png",
