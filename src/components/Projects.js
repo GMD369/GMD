@@ -29,6 +29,14 @@ const projects = [
     image: "/rest.png" 
   },
   {
+    title: "Blog Web App",
+    description: "A modern blog platform built using React for the frontend and Django REST Framework for the backend.",
+    tech: ["React", "Vite", "Tailwind CSS", "Django REST Framework", "Python", "SQLite"],
+    live: "https://blog-web-app-smoky.vercel.app/",
+    code: "https://github.com/GMD369/Blog-Web-App",
+    image: "/blog.png"
+  },
+  {
     title: "Twitter UI Clone (X.com)",
     description: "A responsive frontend clone of Twitter (X.com) built using Tailwind CSS and vanilla JavaScript.",
     tech: ["Tailwind CSS", "HTML5", "JavaScript"],
@@ -76,14 +84,7 @@ const projects = [
     code: "https://github.com/GMD369/RelationalDB",
     image: "/rdbms.png",
   },
-  {
-    title: "Blog Application",
-    description: "RESTful blog platform with authentication (DRF).",
-    tech: ["Django REST Framework", "Python", "SQLite"],
-    live: "",
-    code: "https://github.com/GMD369/Blog-DRF",
-    image: "/blog.png",
-  },
+ 
   {
     title: "Hospital Management System – HealthWave",
     description: "Console-based C++ app managing patients and billing.",
