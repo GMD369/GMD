@@ -6,7 +6,8 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Portfolio | Ghulam Mohiyu Ud Din',
-  description: 'Personal Portfolio based on uiverse.io design',
+  description: 'Ghulam Mohiyu Ud Din (GMD) G. Portfolio – A modern personal portfolio website built with Next.js and Tailwind CSS. Showcasing web development projects, skills, resume, and contact details with responsive design and 3D animations. Perfect for clients searching for a professional full-stack developer.',
+
    icons: {
     icon: "/image.png",
   },

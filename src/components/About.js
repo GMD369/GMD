@@ -52,13 +52,21 @@ export default function About() {
             I&apos;m{" "}
             <span className="font-semibold text-white">Ghulam Mohiyu Ud Din</span>, a{" "}
             <span className="font-semibold text-cyan-300">Full-Stack Web Developer</span>{" "}
-            from Pakistan with over 2 years of experience building responsive, secure, and scalable web applications.
-            I specialize in building full-stack solutions using{" "}
-            <strong>React</strong>, <strong>Node.js</strong>, <strong>Django</strong>,{" "}
-            and databases like <strong>PostgreSQL</strong> & <strong>MongoDB</strong>.
-            I enjoy developing sleek UI/UX with <strong>Next.js</strong> & <strong>Tailwind CSS</strong>,
-            and I&apos;m always exploring new tools in modern web ecosystems.
+            from Pakistan with 2+ years of hands-on experience in building
+            <strong>responsive</strong>, <strong>secure</strong>, and
+            <strong> scalable web applications</strong>.
+            I craft full-stack solutions using{" "}
+            <strong>React</strong>, <strong>Next.js</strong>, <strong>Node.js</strong>,
+            and <strong>Django</strong>, backed by databases like
+            <strong>PostgreSQL</strong> & <strong>MongoDB</strong>.
+            My expertise also includes creating sleek, high-performance UI/UX with
+            <strong>Tailwind CSS</strong> and integrating{" "}
+            <strong>AI-powered solutions</strong> & <strong>workflow automations</strong>
+            to enhance business efficiency.
+            Always curious and growth-focused, I&apos;m constantly exploring
+            <strong>modern web technologies</strong> to deliver top-notch digital experiences.
           </p>
+
 
           {/* Stats */}
           <div className="grid grid-cols-2 gap-4 pt-4 sm:grid-cols-3">

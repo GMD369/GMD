@@ -20,7 +20,7 @@ export default function Hero() {
         {/* TEXT */}
         <div className="flex-1 text-center md:text-left space-y-5 font-pop">
           <span className="inline-block rounded-full border border-cyan-400/60 px-3 py-0.5 text-xs tracking-wide text-cyan-300">
-            Full-Stack Developer | MERN | Django | PostgreSQL
+            Full-Stack Web Developer | MERN Stack | Next.js | Django | PostgreSQL | Automation
           </span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-white">
@@ -31,10 +31,16 @@ export default function Hero() {
           </h1>
 
           <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-            I&apos;m a passionate full-stack web developer focused on building modern, responsive, and secure applications.
-            From robust backend APIs in <strong>Node.js</strong> and <strong>Django</strong> to scalable frontend interfaces in <strong>React</strong> and <strong>Next.js</strong>,
-            I bring ideas to life with clean code and elegant UI powered by <strong>Tailwind CSS</strong>, <strong>MongoDB</strong>, and <strong>PostgreSQL</strong>.
+            I&apos;m a dedicated full-stack web developer with a strong focus on building
+            <strong> modern</strong>, <strong>responsive</strong>, and <strong>secure</strong> applications.
+            From crafting robust backend APIs using <strong>Node.js</strong> and <strong>Django</strong>
+            to developing scalable frontend interfaces with <strong>React</strong> and <strong>Next.js</strong>,
+            I turn ideas into reality with clean code and pixel-perfect UI powered by
+            <strong> Tailwind CSS</strong>, <strong>MongoDB</strong>, and <strong>PostgreSQL</strong>.
+            I also integrate <strong>AI-powered solutions</strong> and <strong>workflow automations</strong>
+            to make businesses more efficient.
           </p>
+
 
           <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 pt-1">
             <a

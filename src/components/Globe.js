@@ -57,7 +57,7 @@ function RubiksCube({ isMobile }) {
   return (
     <group
       ref={cubeRef}
-      scale={isMobile ? 1.4 : 1.4} // mobile ka size aur chhota
+      scale={isMobile ? 1.8 : 1.4} // mobile ka size ab bara
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
@@ -95,7 +95,7 @@ export default function PremiumGradientCube() {
       <Canvas
         shadows
         camera={{
-          position: isMobile ? [6, 6, 9] : [5, 5, 8], // camera thoda door
+          position: isMobile ? [6.5, 6.5, 9.5] : [5, 5, 8], // camera thoda door mobile par
           fov: 40,
         }}
         style={{ width: "100%", height: "100%" }}
