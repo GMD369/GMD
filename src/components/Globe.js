@@ -3,13 +3,12 @@
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, RoundedBox } from "@react-three/drei";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 
-/* ----------- Cube Piece with Premium Color ----------- */
 function CubePiece({ position, color }) {
   return (
     <RoundedBox
-      args={[0.9, 0.9, 0.9]} // chhota taake gap dikhe
+      args={[0.9, 0.9, 0.9]}
       radius={0.08}
       smoothness={4}
       position={position}
@@ -18,35 +17,32 @@ function CubePiece({ position, color }) {
     >
       <meshStandardMaterial
         color={color}
-        roughness={0.22} // shiny surface
-        metalness={0.4}  // reflection enhance
-        emissive={"#003d66"} // cyan glow feel
-        emissiveIntensity={0.05}
+        roughness={0.22}
+        metalness={0.4}
+        emissive={"#003d66"}
+        emissiveIntensity={0.06}
       />
     </RoundedBox>
   );
 }
 
-/* ----------- Rubik's Cube Group ----------- */
-function RubiksCube() {
+function RubiksCube({ isMobile }) {
   const cubeRef = useRef();
   const [hovered, setHovered] = useState(false);
 
-  // rotation animation
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
     cubeRef.current.rotation.y = t * (hovered ? 0.6 : 0.3);
     cubeRef.current.rotation.x = t * 0.15;
   });
 
-  // Premium gradient dark blue color set
   const faceColors = {
-    front: "#012b52",   // Deep Navy Blue
-    back: "#02345c",    // Slightly lighter navy
-    left: "#013e73",    // Teal tint
-    right: "#014e8f",   // Medium blue
-    top: "#02223d",     // Dark top
-    bottom: "#011726",  // Darkest bottom
+    front: "#012b52",
+    back: "#02345c",
+    left: "#013e73",
+    right: "#014e8f",
+    top: "#02223d",
+    bottom: "#011726",
   };
 
   const parts = [];
@@ -61,7 +57,7 @@ function RubiksCube() {
   return (
     <group
       ref={cubeRef}
-      scale={1.4}
+      scale={isMobile ? 1.4 : 1.4} // mobile ka size aur chhota
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
@@ -76,7 +72,7 @@ function RubiksCube() {
               ? faceColors.left
               : Math.abs(y) === 1
               ? faceColors.top
-              : "#010f1c" // inner darker shade
+              : "#010f1c"
           }
         />
       ))}
@@ -84,33 +80,44 @@ function RubiksCube() {
   );
 }
 
-/* ----------- Canvas Export ----------- */
 export default function PremiumGradientCube() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkSize = () => setIsMobile(window.innerWidth < 768);
+    checkSize();
+    window.addEventListener("resize", checkSize);
+    return () => window.removeEventListener("resize", checkSize);
+  }, []);
+
   return (
     <div style={{ width: "100%", height: "100%", overflow: "visible" }}>
       <Canvas
         shadows
-        camera={{ position: [5, 5, 8], fov: 40 }}
+        camera={{
+          position: isMobile ? [6, 6, 9] : [5, 5, 8], // camera thoda door
+          fov: 40,
+        }}
         style={{ width: "100%", height: "100%" }}
-        gl={{ alpha: true }} // Transparent background
+        gl={{ alpha: true }}
       >
-        {/* Lights optimized for shine */}
-        <ambientLight intensity={0.3} />
+        <ambientLight intensity={isMobile ? 0.4 : 0.3} />
         <directionalLight
           position={[5, 8, 5]}
           color="#89d9ff"
-          intensity={1.5}
+          intensity={isMobile ? 1.7 : 1.5}
           castShadow
         />
-        <pointLight position={[-5, -5, 5]} color="#007fff" intensity={0.8} />
+        <pointLight
+          position={[-5, -5, 5]}
+          color="#007fff"
+          intensity={isMobile ? 1 : 0.8}
+        />
 
-        {/* Cube */}
-        <RubiksCube />
+        <RubiksCube isMobile={isMobile} />
 
-        {/* Controls */}
         <OrbitControls enableZoom={false} enablePan={false} autoRotate />
 
-        {/* Glow effect */}
         <EffectComposer>
           <Bloom
             intensity={0.5}
