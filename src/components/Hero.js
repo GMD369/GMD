@@ -13,14 +13,14 @@ export default function Hero() {
     >
       {/* 🔵 Diagonal background glow from top-left */}
       <div className="absolute inset-0 -z-10">
-        <div className="w-full h-full bg-gradient-to-br from-cyan-400/20 to-transparent blur-[120px]"></div>
+        <div className="w-full h-full bg-gradient-to-br from-cyan-400/25 via-blue-400/20 to-transparent blur-[140px]"></div>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row items-center gap-12 max-w-6xl w-full">
         {/* TEXT */}
         <div className="flex-1 text-center md:text-left space-y-5 font-pop">
-          <span className="inline-block rounded-full border border-cyan-400/60 px-3 py-0.5 text-xs tracking-wide text-cyan-300">
-            Full-Stack Web Developer | MERN Stack | Next.js | Django | PostgreSQL | Automation
+          <span className=" p-8 inline-block rounded-full bg-gradient-to-r from-cyan-400/10 via-blue-500/10 to-purple-500/10 border border-cyan-400/50 px-4 py-1 text-[11px] sm:text-xs tracking-wide text-cyan-300 shadow-md backdrop-blur-sm hover:from-cyan-400/20 hover:via-blue-500/20 hover:to-purple-500/20 transition-all">
+            Full-Stack Web Developer &nbsp;|&nbsp; MERN Stack &nbsp;|&nbsp; Next.js &nbsp;|&nbsp; Django &nbsp;|&nbsp; PostgreSQL &nbsp;|&nbsp; Automation
           </span>
 
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-snug text-white">
@@ -41,25 +41,30 @@ export default function Hero() {
             to make businesses more efficient.
           </p>
 
-
-          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 pt-1">
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-4 pt-2">
+            {/* Contact Me Button (Globe Color) */}
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 px-5 py-2.5 text-xs sm:text-sm font-semibold text-black hover:from-cyan-500 hover:to-blue-600 transition"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#003d66] via-[#005b99] to-[#007acc] px-6 py-3 text-sm font-semibold text-white shadow-lg transition-all hover:scale-[1.04] hover:shadow-cyan-500/40"
             >
-              <Mail size={14} /> Contact Me
+              <Mail size={16} /> Contact Me
             </a>
+
+            {/* View Projects Button */}
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-md border border-white/15 bg-white/5 px-5 py-2.5 text-xs sm:text-sm font-semibold text-white hover:bg-white/10 transition"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white shadow-md backdrop-blur-md transition-all hover:bg-white/10 hover:scale-[1.04]"
             >
-              <ArrowRight size={14} /> View Projects
+              <ArrowRight size={16} /> View Projects
             </a>
           </div>
         </div>
 
         {/* Cube */}
-        <div className="flex-1 relative min-w-[240px] w-full max-w-[360px] h-[300px] sm:h-[340px] md:h-[380px] overflow-visible">
+        <div
+          className="flex-1 relative w-full h-[260px] sm:h-[320px] md:h-[380px] 
+          max-w-[280px] sm:max-w-[340px] md:max-w-[400px] overflow-visible"
+        >
           <Cube />
         </div>
       </div>
