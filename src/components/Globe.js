@@ -8,8 +8,8 @@ import { useRef, useState, useEffect } from "react";
 function CubePiece({ position, color }) {
   return (
     <RoundedBox
-      args={[0.9, 0.9, 0.9]}
-      radius={0.08}
+      args={[0.98, 0.98, 0.98]} // Increased size to reduce gap
+      radius={0.18} // More rounded edges
       smoothness={4}
       position={position}
       castShadow
@@ -57,7 +57,7 @@ function RubiksCube({ isMobile }) {
   return (
     <group
       ref={cubeRef}
-      scale={isMobile ? 1.8 : 1.4} // mobile ka size ab bara
+      scale={isMobile ? 1.8 : 1.4} // Slightly smaller on both mobile and desktop
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >
