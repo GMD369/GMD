@@ -1,8 +1,10 @@
+
 "use client";
+import React from "react";
 
 import { useState } from "react";
-import { Menu, X, Moon } from "lucide-react";
-import { Link as ScrollLink } from "react-scroll";
+import { Menu, X } from "lucide-react";
+import { Link as ScrollLink, Events } from "react-scroll";
 
 const navItems = [
   { name: "Home", to: "hero" },
@@ -14,21 +16,41 @@ const navItems = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState("hero");
+
+  // Listen to scroll events to update active link
+  React.useEffect(() => {
+    Events.scrollEvent.register("begin", () => {});
+    Events.scrollEvent.register("end", () => {});
+    return () => {
+      Events.scrollEvent.remove("begin");
+      Events.scrollEvent.remove("end");
+    };
+  }, []);
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 bg-black/60 backdrop-blur-md shadow-md font-grotesk">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-8">
+    <nav className="fixed inset-x-0 top-0 z-50 bg-black/70 backdrop-blur-lg shadow-lg font-grotesk border-b border-white/10">
+      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
         {/* Logo */}
-        <div className="relative select-none text-3xl font-extrabold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent drop-shadow-lg flex items-center gap-1">
-          <span className="text-5xl text-cyan-600">G</span>
-          <span className="font-black relative top-3 right-1 text-cyan-300 text-xl mx-0.5">●</span>
-          <span className="font-[cursive]">Portfolio</span>
-          <div className="absolute left-0 -bottom-1 h-[3px] w-full rounded-full bg-cyan-400" />
-        </div>
-
+        <ScrollLink
+          to="hero"
+          smooth
+          duration={500}
+          offset={-80}
+          className="relative select-none cursor-pointer flex items-center gap-2 group"
+          onClick={() => setActive("hero")}
+        >
+          <span className="text-6xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent drop-shadow-2xl transition group-hover:scale-110 group-hover:from-cyan-300 group-hover:to-purple-400 tracking-tight flex items-end">
+            <span>G</span>
+            <span className="ml-1 mb-2 inline-block w-3 h-3 rounded-full bg-cyan-300 animate-pulse border-2 border-cyan-400 shadow-lg"></span>
+          </span>
+          <span className="font-[cursive] text-2xl text-gray-100 group-hover:text-white transition tracking-wide ml-1 drop-shadow-sm">
+            Portfolio
+          </span>
+        </ScrollLink>
 
         {/* Desktop links */}
-        <ul className="hidden md:flex items-center space-x-8 text-white font-medium">
+        <ul className="hidden md:flex items-center space-x-2 text-white font-medium">
           {navItems.map(({ name, to }) => (
             <li key={to}>
               <ScrollLink
@@ -36,7 +58,10 @@ export default function Navbar() {
                 smooth
                 duration={500}
                 offset={-80}
-                className="cursor-pointer transition hover:text-cyan-400"
+                spy={true}
+                onSetActive={() => setActive(to)}
+                className={`cursor-pointer px-4 py-2 rounded-lg transition font-semibold text-base
+                  ${active === to ? "bg-gray-800/80 text-cyan-400 shadow-md" : "hover:bg-gray-700/60 hover:text-cyan-300 text-gray-200"}`}
               >
                 {name}
               </ScrollLink>
@@ -46,16 +71,16 @@ export default function Navbar() {
 
         {/* Right controls */}
         <div className="flex items-center gap-4">
-          {/* <button className="rounded-full bg-[#1f1f1f]/80 p-2 text-white hover:bg-[#2a2a2a]/90">
-            <Moon size={18} />
-          </button> */}
-
           {/* CTA (desktop only) */}
           <a
             href="#contact"
-            className="hidden sm:inline-block rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 px-5 py-2 text-sm font-semibold text-white transition hover:from-cyan-500 hover:to-blue-600"
+            className="hidden sm:inline-block relative overflow-hidden rounded-xl px-6 py-2 text-base font-bold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-500 hover:scale-105 backdrop-blur-md border border-white/20 group"
           >
-            Get Started
+            <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl blur-sm"></span>
+            <span className="relative z-10 flex items-center gap-2">
+              <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              Get Started
+            </span>
           </a>
 
           {/* Burger menu (mobile only) */}
@@ -79,8 +104,11 @@ export default function Navbar() {
               smooth
               duration={500}
               offset={-80}
+              spy={true}
+              onSetActive={() => setActive(to)}
               onClick={() => setOpen(false)}
-              className="text-2xl font-semibold text-white hover:text-cyan-400 transition"
+              className={`text-2xl font-semibold px-8 py-3 rounded-lg transition
+                ${active === to ? "bg-gray-800/80 text-cyan-400 shadow-md" : "hover:bg-gray-700/60 hover:text-cyan-300 text-white"}`}
             >
               {name}
             </ScrollLink>
@@ -89,9 +117,13 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="rounded-md bg-gradient-to-r from-cyan-400 to-blue-500 px-8 py-3 text-lg font-semibold text-black hover:from-cyan-500 hover:to-blue-600"
+            className="relative overflow-hidden rounded-xl px-10 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-500 hover:scale-105 backdrop-blur-md border border-white/20 group"
           >
-            Get Started
+            <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl blur-sm"></span>
+            <span className="relative z-10 flex items-center gap-2">
+              <svg className="w-5 h-5 animate-bounce" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+              Get Started
+            </span>
           </a>
         </div>
       )}
