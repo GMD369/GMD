@@ -40,9 +40,9 @@ export default function Navbar() {
           className="relative select-none cursor-pointer flex items-center gap-2 group"
           onClick={() => setActive("hero")}
         >
-          <span className="text-6xl font-black bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500 bg-clip-text text-transparent drop-shadow-2xl transition group-hover:scale-110 group-hover:from-cyan-300 group-hover:to-purple-400 tracking-tight flex items-end">
+          <span className="text-6xl font-black bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 bg-clip-text text-transparent drop-shadow-2xl transition group-hover:scale-110 group-hover:from-gray-600 group-hover:to-gray-900 tracking-tight flex items-end">
             <span>G</span>
-            <span className="ml-1 mb-2 inline-block w-3 h-3 rounded-full bg-cyan-300 animate-pulse border-2 border-cyan-400 shadow-lg"></span>
+            <span className="ml-1 mb-2 inline-block w-3 h-3 rounded-full animate-pulse shadow-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800"></span>
           </span>
           <span className="font-[cursive] text-2xl text-gray-100 group-hover:text-white transition tracking-wide ml-1 drop-shadow-sm">
             Portfolio
@@ -61,7 +61,7 @@ export default function Navbar() {
                 spy={true}
                 onSetActive={() => setActive(to)}
                 className={`cursor-pointer px-4 py-2 rounded-lg transition font-semibold text-base
-                  ${active === to ? "bg-gray-800/80 text-cyan-400 shadow-md" : "hover:bg-gray-700/60 hover:text-cyan-300 text-gray-200"}`}
+                  ${active === to ? "bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 text-white shadow-md" : "hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-600 hover:to-gray-800 hover:text-white text-gray-200"}`}
               >
                 {name}
               </ScrollLink>
@@ -74,7 +74,7 @@ export default function Navbar() {
           {/* CTA (desktop only) */}
           <a
             href="#contact"
-            className="hidden sm:inline-block relative overflow-hidden rounded-xl px-6 py-2 text-base font-bold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-500 hover:scale-105 backdrop-blur-md border border-white/20 group"
+            className="hidden sm:inline-block relative overflow-hidden rounded-xl px-6 py-2 text-base font-bold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 hover:from-gray-600 hover:to-gray-900 hover:scale-105 backdrop-blur-md group"
           >
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl blur-sm"></span>
             <span className="relative z-10 flex items-center gap-2">
@@ -108,7 +108,7 @@ export default function Navbar() {
               onSetActive={() => setActive(to)}
               onClick={() => setOpen(false)}
               className={`text-2xl font-semibold px-8 py-3 rounded-lg transition
-                ${active === to ? "bg-gray-800/80 text-cyan-400 shadow-md" : "hover:bg-gray-700/60 hover:text-cyan-300 text-white"}`}
+                ${active === to ? "bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 text-white shadow-md" : "hover:bg-gradient-to-r hover:from-gray-700 hover:via-gray-600 hover:to-gray-800 hover:text-white text-white"}`}
             >
               {name}
             </ScrollLink>
@@ -117,7 +117,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="relative overflow-hidden rounded-xl px-10 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-blue-900 via-blue-700 to-cyan-600 hover:from-blue-800 hover:to-cyan-500 hover:scale-105 backdrop-blur-md border border-white/20 group"
+            className="relative overflow-hidden rounded-xl px-10 py-4 text-xl font-bold text-white shadow-lg transition-all duration-300 bg-gradient-to-r from-gray-700 via-gray-600 to-gray-800 hover:from-gray-600 hover:to-gray-900 hover:scale-105 backdrop-blur-md group"
           >
             <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl blur-sm"></span>
             <span className="relative z-10 flex items-center gap-2">
