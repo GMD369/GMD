@@ -39,7 +39,7 @@ export default function Hero() {
       <div className="flex flex-col-reverse md:flex-row items-center gap-8 sm:gap-10 md:gap-12 max-w-6xl w-full">
         {/* TEXT */}
         <div className="flex-1 text-center md:text-left space-y-4 sm:space-y-5 font-pop">
-          <span className="relative flex items-center gap-0.5 sm:gap-2 pl-2.5 pr-3 py-1 sm:pl-4 sm:pr-6 sm:py-2 rounded-full bg-white/10 shadow-2xl border border-white/10 backdrop-blur-xl text-[9px] sm:text-base font-semibold tracking-wide text-white/90 overflow-hidden max-w-full min-w-0">
+          <span className="relative flex items-center gap-1 sm:gap-2 pl-2.5 pr-3 py-1.5 sm:pl-4 sm:pr-6 sm:py-2 rounded-full bg-white/10 shadow-2xl border border-white/10 backdrop-blur-xl text-sm sm:text-base font-semibold tracking-wide text-white/90 overflow-hidden max-w-full min-w-0">
             <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 via-blue-400 to-purple-500 rounded-l-full sm:w-1.5"></span>
             <span className="relative z-10 flex items-center gap-1 sm:gap-2">
               <svg className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" /></svg>
@@ -60,11 +60,11 @@ export default function Hero() {
 
           {/* Niche/USP Section */}
           <div className="mt-2 mb-2 text-left md:text-left max-w-xs sm:max-w-none mx-auto md:mx-0">
-            <div className="inline-flex items-center gap-1 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-[10px] sm:text-sm font-semibold text-cyan-200 mb-1 sm:mb-2">
+            <div className="inline-flex items-center gap-1 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-sm sm:text-base font-semibold text-cyan-200 mb-1 sm:mb-2">
               <svg className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13 16h-1v-4h-1m1-4h.01" /></svg>
               AI-Powered, Automated, & Scalable Web Solutions
             </div>
-            <ul className="list-disc pl-4 sm:pl-5 text-[10px] sm:text-sm text-cyan-100/90 space-y-0.5 sm:space-y-1">
+            <ul className="list-disc pl-4 sm:pl-5 text-sm sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1">
               <li>Full-Stack SaaS & Job Platforms</li>
               <li>AI/ML & Automation Workflows</li>
               <li>Dashboards, Admin Panels, Tools</li>
