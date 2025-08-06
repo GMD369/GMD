@@ -96,7 +96,7 @@ export default function Hero() {
 
         {/* Cube */}
         <div
-          className="flex-1 relative w-full h-[320px] sm:h-[400px] md:h-[480px] max-w-[340px] sm:max-w-[440px] md:max-w-[520px] overflow-visible"
+          className="flex-1 relative w-full h-[220px] xs:h-[260px] sm:h-[400px] md:h-[480px] max-w-[200px] xs:max-w-[260px] sm:max-w-[440px] md:max-w-[520px] overflow-visible mx-auto"
         >
           <Cube />
         </div>
