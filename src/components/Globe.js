@@ -8,9 +8,9 @@ import { useRef, useState, useEffect } from "react";
 function CubePiece({ position, color }) {
   return (
     <RoundedBox
-      args={[0.98, 0.98, 0.98]} // Increased size to reduce gap
-      radius={0.18} // More rounded edges
-      smoothness={4}
+      args={[0.92, 0.92, 0.92]} // Thoda chota size for smaller globe
+      radius={0.22} // Edges thoda aur rounded
+      smoothness={6} // Smoother corners
       position={position}
       castShadow
       receiveShadow
@@ -57,7 +57,7 @@ function RubiksCube({ isMobile }) {
   return (
     <group
       ref={cubeRef}
-      scale={isMobile ? 1.8 : 1.4} // Slightly smaller on both mobile and desktop
+      scale={isMobile ? 1.5 : 1.2} // Globe thoda chota for both mobile & desktop
       onPointerOver={() => setHovered(true)}
       onPointerOut={() => setHovered(false)}
     >

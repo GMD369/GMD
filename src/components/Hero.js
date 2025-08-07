@@ -13,10 +13,6 @@ export default function Hero() {
   useEffect(() => {
     if (!typeRef.current) return;
     const text = "Ghulam Mohiyu Ud Din";
-      <section
-        id="hero"
-        className="relative min-h-[90vh] flex items-center justify-center px-2 sm:px-4 md:px-10 overflow-x-hidden overflow-y-visible pt-8 sm:pt-12 md:pt-16"
-      >
     let i = 0;
     let timeout;
     function type() {
@@ -37,7 +33,7 @@ export default function Hero() {
     >
       {/* 🔵 Diagonal background glow from top-left */}
       <div className="absolute inset-0 -z-10">
-      className="relative min-h-[90vh] flex items-center justify-center px-2 sm:px-4 md:px-10 overflow-x-hidden overflow-y-visible"
+        <div className="w-full h-full bg-gradient-to-br from-cyan-400/25 via-blue-400/20 to-transparent blur-[140px]"></div>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row items-center gap-8 sm:gap-10 md:gap-12 max-w-6xl w-full">
@@ -55,7 +51,7 @@ export default function Hero() {
 
           {/* Niche/USP Section */}
           <div className="mt-2 mb-2 text-left md:text-left max-w-xs sm:max-w-none mx-auto md:mx-0 overflow-x-auto">
-      className="relative min-h-[90vh] flex items-center justify-center px-2 sm:px-4 md:px-10 overflow-x-hidden overflow-y-visible"
+            <div className="inline-flex items-center gap-1 sm:gap-2 px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-sm sm:text-base font-semibold text-cyan-200 mb-1 sm:mb-2">
               AI-Powered, Automated, & Scalable Web Solutions
             </div>
             <ul className="list-disc pl-4 sm:pl-5 text-sm sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1">
@@ -100,7 +96,7 @@ export default function Hero() {
 
         {/* Cube */}
         <div
-          className="flex-1 relative w-full h-[220px] xs:h-[260px] sm:h-[400px] md:h-[480px] max-w-[200px] xs:max-w-[260px] sm:max-w-[440px] md:max-w-[520px] overflow-visible mx-auto"
+          className="flex-1 relative w-full h-[320px] sm:h-[400px] md:h-[480px] max-w-[340px] sm:max-w-[440px] md:max-w-[520px] overflow-visible"
         >
           <Cube />
         </div>
