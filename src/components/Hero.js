@@ -68,13 +68,22 @@ export default function Hero() {
             My expertise: SaaS platforms, automation workflows, dashboards, and secure APIs using MERN, Next.js, Django, and more.
           </p>
 
-          <span className="relative flex flex-wrap items-center gap-x-1 gap-y-0.5 sm:gap-2 pl-2 pr-3 py-1 sm:pl-4 sm:pr-6 sm:py-2 rounded-full bg-white/10 shadow-2xl border border-white/10 backdrop-blur-xl text-xs sm:text-base font-semibold tracking-wide text-white/90 w-full max-w-full min-w-0 break-words">
+          <span className="relative flex flex-wrap items-center gap-x-1 gap-y-0.5 sm:gap-2 pl-2 pr-3 py-1 sm:pl-4 sm:pr-6 sm:py-2 rounded-full bg-white/10 shadow-2xl border border-white/10 backdrop-blur-xl text-xs sm:text-base font-semibold tracking-wide text-white/90 w-full max-w-full min-w-0 break-words whitespace-normal">
             <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 via-blue-400 to-purple-500 rounded-l-full sm:w-1.5"></span>
             <span className="relative z-10 flex flex-wrap gap-x-1 gap-y-0.5 sm:gap-2 w-full min-w-0 items-center">
-              <span className="break-words gap-2 whitespace-normal flex items-center">
+              <span className="break-words gap-2 whitespace-normal flex flex-wrap items-center w-full">
                 <svg className="w-3 h-3 sm:w-4 sm:h-4 text-cyan-400 flex-shrink-0 mr-2" style={{ display: 'inline', verticalAlign: 'middle' }} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" /><path strokeLinecap="round" strokeLinejoin="round" d="M8 12l2 2 4-4" /></svg>
                 <span className="ml-1">Full-Stack Web Developer</span>
-                <span className="text-cyan-400">|</span> MERN Stack <span className="text-cyan-400">|</span> Next.js <span className="text-cyan-400">|</span> Django <span className="text-cyan-400">|</span> PostgreSQL <span className="text-cyan-400">|</span> Automation
+                <span className="text-cyan-400">|</span>
+                <span>MERN Stack</span>
+                <span className="text-cyan-400">|</span>
+                <span>Next.js</span>
+                <span className="text-cyan-400">|</span>
+                <span>Django</span>
+                <span className="text-cyan-400">|</span>
+                <span>PostgreSQL</span>
+                <span className="text-cyan-400">|</span>
+                <span>Automation</span>
               </span>
             </span>
           </span>
