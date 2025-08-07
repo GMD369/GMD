@@ -50,11 +50,11 @@ export default function Hero() {
           </h1>
 
           {/* Niche/USP Section */}
-          <div className="mt-2 mb-2 text-left md:text-left max-w-full sm:max-w-none mx-auto md:mx-0 overflow-x-auto">
-            <div className="inline-flex items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-xs sm:text-base font-semibold text-cyan-200 mb-1 sm:mb-2">
+          <div className="mt-2 mb-2 text-left md:text-left w-full max-w-full mx-auto md:mx-0 overflow-visible">
+            <div className="inline-flex flex-wrap items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-xs sm:text-base font-semibold text-cyan-200 mb-1 sm:mb-2">
               AI-Powered, Automated, & Scalable Web Solutions
             </div>
-            <ul className="list-disc pl-3 sm:pl-5 text-xs sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1">
+            <ul className="list-disc pl-3 sm:pl-5 text-xs sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1 break-words">
               <li>Full-Stack SaaS & Job Platforms</li>
               <li>AI/ML & Automation Workflows</li>
               <li>Dashboards, Admin Panels, Tools</li>
@@ -63,12 +63,12 @@ export default function Hero() {
             </ul>
           </div>
 
-          <p className="text-gray-300 text-xs sm:text-base leading-relaxed">
+          <p className="text-gray-300 text-xs sm:text-base leading-relaxed break-words">
             I help startups and businesses build modern, scalable, and AI-powered web solutions.<br />
             My expertise: SaaS platforms, automation workflows, dashboards, and secure APIs using MERN, Next.js, Django, and more.
           </p>
 
-          <span className="relative flex flex-wrap items-center gap-x-1 gap-y-0.5 sm:gap-2 pl-2 pr-3 py-1 sm:pl-4 sm:pr-6 sm:py-2 rounded-full bg-white/10 shadow-2xl border border-white/10 backdrop-blur-xl text-xs sm:text-base font-semibold tracking-wide text-white/90 max-w-full min-w-0 overflow-x-auto whitespace-normal break-words">
+          <span className="relative flex flex-wrap items-center gap-x-1 gap-y-0.5 sm:gap-2 pl-2 pr-3 py-1 sm:pl-4 sm:pr-6 sm:py-2 rounded-full bg-white/10 shadow-2xl border border-white/10 backdrop-blur-xl text-xs sm:text-base font-semibold tracking-wide text-white/90 w-full max-w-full min-w-0 break-words">
             <span className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-cyan-400 via-blue-400 to-purple-500 rounded-l-full sm:w-1.5"></span>
             <span className="relative z-10 flex flex-wrap gap-x-1 gap-y-0.5 sm:gap-2 w-full min-w-0 items-center">
               <span className="break-words gap-2 whitespace-normal flex items-center">
