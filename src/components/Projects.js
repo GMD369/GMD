@@ -48,7 +48,7 @@ const projects = [
     title: "Netflix UI Clone",
     description: "A responsive static clone of Netflix's homepage layout designed using HTML5 and CSS3.",
     tech: ["HTML", "CSS"],
-    live: "https://netflix-clone-git-master-ghulam-mohiyu-ud-dins-projects.vercel.app/",
+    live: "https://netflix-clone-rust-pi.vercel.app",
     code: "https://github.com/GMD369/Netflix_Clone",
     image: "/netflix.png",
   },
