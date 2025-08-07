@@ -38,7 +38,7 @@ export default function Hero() {
 
       <div className="flex flex-col-reverse md:flex-row items-center gap-6 sm:gap-10 md:gap-12 max-w-6xl w-full">
         {/* TEXT */}
-        <div className="flex-1 text-center md:text-left space-y-4 sm:space-y-5 font-pop">
+        <div className="flex-1 w-full max-w-full text-center md:text-left space-y-4 sm:space-y-5 font-pop">
           <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-snug text-white break-words">
             Hi, I&apos;m&nbsp;
             <span
@@ -50,11 +50,11 @@ export default function Hero() {
           </h1>
 
           {/* Niche/USP Section */}
-          <div className="mt-2 mb-2 text-center md:text-left w-full max-w-full mx-auto md:mx-0 overflow-visible">
+          <div className="mt-2 mb-2 text-center md:text-left w-full max-w-full mx-auto md:mx-0">
             <div className="inline-flex flex-wrap items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-xs sm:text-base font-semibold text-cyan-200 mb-1 sm:mb-2">
               AI-Powered, Automated, & Scalable Web Solutions
             </div>
-            <ul className="list-disc pl-0 sm:pl-5 text-xs sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1 break-words text-center md:text-left w-full">
+            <ul className="list-disc pl-4 sm:pl-5 text-xs sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1 break-words text-center md:text-left w-full">
               <li className="break-words">Full-Stack SaaS & Job Platforms</li>
               <li className="break-words">AI/ML & Automation Workflows</li>
               <li className="break-words">Dashboards, Admin Panels, Tools</li>
@@ -63,7 +63,7 @@ export default function Hero() {
             </ul>
           </div>
 
-          <p className="text-gray-300 text-xs sm:text-base leading-relaxed break-words">
+          <p className="text-gray-300 text-xs sm:text-base leading-relaxed break-words w-full max-w-full">
             I help startups and businesses build modern, scalable, and AI-powered web solutions.<br />
             My expertise: SaaS platforms, automation workflows, dashboards, and secure APIs using MERN, Next.js, Django, and more.
           </p>
@@ -79,19 +79,18 @@ export default function Hero() {
             </span>
           </span>
 
-          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 pt-2">
+          <div className="flex flex-col sm:flex-row justify-center md:justify-start gap-3 pt-2 w-full max-w-full">
             {/* Contact Me Button (Globe Color) */}
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#003d66] via-[#005b99] to-[#007acc] px-5 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg transition-all hover:scale-[1.04] hover:shadow-cyan-500/40"
+              className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-[#003d66] via-[#005b99] to-[#007acc] px-5 py-2 text-xs sm:text-sm font-semibold text-white shadow-lg transition-all hover:scale-[1.04] hover:shadow-cyan-500/40 w-full sm:w-auto"
             >
               <Mail size={16} /> Contact Me
             </a>
-
             {/* View Projects Button */}
             <a
               href="#projects"
-              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-2 text-xs sm:text-sm font-semibold text-white shadow-md backdrop-blur-md transition-all hover:bg-white/10 hover:scale-[1.04]"
+              className="inline-flex items-center gap-2 rounded-lg border border-white/20 bg-white/5 px-5 py-2 text-xs sm:text-sm font-semibold text-white shadow-md backdrop-blur-md transition-all hover:bg-white/10 hover:scale-[1.04] w-full sm:w-auto"
             >
               <ArrowRight size={16} /> View Projects
             </a>
