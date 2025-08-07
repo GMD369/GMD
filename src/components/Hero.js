@@ -50,16 +50,16 @@ export default function Hero() {
           </h1>
 
           {/* Niche/USP Section */}
-          <div className="mt-2 mb-2 text-left md:text-left w-full max-w-full mx-auto md:mx-0 overflow-visible">
+          <div className="mt-2 mb-2 text-center md:text-left w-full max-w-full mx-auto md:mx-0 overflow-visible">
             <div className="inline-flex flex-wrap items-center gap-1 sm:gap-2 px-2 py-0.5 sm:px-3 sm:py-1 rounded-full bg-gradient-to-r from-cyan-700/80 via-blue-700/80 to-purple-700/80 shadow border border-cyan-400/20 text-xs sm:text-base font-semibold text-cyan-200 mb-1 sm:mb-2">
               AI-Powered, Automated, & Scalable Web Solutions
             </div>
-            <ul className="list-disc pl-3 sm:pl-5 text-xs sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1 break-words">
-              <li>Full-Stack SaaS & Job Platforms</li>
-              <li>AI/ML & Automation Workflows</li>
-              <li>Dashboards, Admin Panels, Tools</li>
-              <li>Modern UI/UX, Secure Apps</li>
-              <li>Database & Backend APIs</li>
+            <ul className="list-disc pl-0 sm:pl-5 text-xs sm:text-base text-cyan-100/90 space-y-0.5 sm:space-y-1 break-words text-center md:text-left w-full">
+              <li className="break-words">Full-Stack SaaS & Job Platforms</li>
+              <li className="break-words">AI/ML & Automation Workflows</li>
+              <li className="break-words">Dashboards, Admin Panels, Tools</li>
+              <li className="break-words">Modern UI/UX, Secure Apps</li>
+              <li className="break-words">Database & Backend APIs</li>
             </ul>
           </div>
 
